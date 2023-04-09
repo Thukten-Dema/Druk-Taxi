@@ -1,0 +1,24 @@
+{
+  "name": "druktaxi",
+  "version": "1.0.0",
+  "description": "to bridge the gap between the passengers and the taxi driver",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://gitlab.com/12210025.gcit/druktaxi/-/issues)"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "espress": "^0.0.0",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
