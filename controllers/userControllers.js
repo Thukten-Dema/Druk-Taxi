@@ -1,4 +1,4 @@
-const User = require('./../models/userModels')
+const User = require('./../model/userModel')
 exports.getAllUsers = async (req, res, next) => {
     try {
         const users = await User.find()
