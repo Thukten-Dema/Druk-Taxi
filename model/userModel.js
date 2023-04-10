@@ -2,13 +2,13 @@ const mongoose = require('mongoose')
 const validator = require('validator')
 
 const userSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: [true, 'Your name please!'],
-    },
+    // name: {
+    //     type: String,
+    //     required: [true, 'Your name please!'],
+    // },
     email: {
         type: String,
-        required: [true, 'Please provide your name!'],
+        //required: [true, 'Please provide your name!'],
         unique: true,
         lowercase: true,
         validate: [validator.isEmail, 'Provide a valid email'],
@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema({
     role: {
         type: String,
         enum: ['passenger', 'driver', 'admin'],
-        default: 'user',
+        default: 'passenger',
     },
     password: {
         type: String,
