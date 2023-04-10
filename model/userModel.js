@@ -34,16 +34,16 @@ const userSchema = new mongoose.Schema({
         default: true,
         select: false,
     },
-    passwordConfirm: {
-        type : String,
-        required: [true, 'Please confirm your password'],
-        validate: {
-            validator : function (el) {
-                return al === this.password
-            }, 
-            message: 'Passwords are not the same' , 
-        },
-    },
+    // passwordConfirm: {
+    //     type : String,
+    //     required: [true, 'Please confirm your password'],
+    //     validate: {
+    //         validator : function (el) {
+    //             return al === this.password
+    //         }, 
+    //         message: 'Passwords are not the same' , 
+    //     },
+    // },
 })
 
 const User = mongoose.model('User', userSchema)
