@@ -8,6 +8,7 @@ app.use(express.json())
 const userRouter = require('./routes/userRoutes')
 
 app.use('/api/v1/passenger', userRouter)
+app.use('/api/v1/signup', userRouter)
 
 /*Starting the server on port 4001. */
 // const port = 4005
