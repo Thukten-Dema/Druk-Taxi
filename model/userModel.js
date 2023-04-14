@@ -62,6 +62,22 @@ userSchema.pre('save',async function (next) {
     this.passwordConfirm = undefined
     next()
 })
+userSchema.pre('findOneAndUpdate', async function (next) {
+    const update = this.getUpdate();
+    if (update.password !== '' &&
+        update.password !== undefined &&
+        update.password == update.passwordConfirm) {
+
+            //Hash the password with cost of 12
+            this.getUpdate().password = await bcrypt.hash(update.password,12)
+
+            // Deletepassword field
+            update.passwordConfirm =undefined
+            next()
+        } else
+        next()
+})
+
 
 const User = mongoose.model('User', userSchema)
 module.exports = User
