@@ -78,12 +78,6 @@ userSchema.pre('findOneAndUpdate', async function (next) {
         next()
 })
 
-userSchema.methods.correctPassword = async function (
-    candiatePassword,
-    userPassword,
-) {
-    return await bcrypt.compare(candiatePassword, userPassword)
-}
 
 
 const User = mongoose.model('User', userSchema)
