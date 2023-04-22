@@ -1,12 +1,14 @@
 const express =  require("express")
+const path = require('path')
 
 const app = express()
-module.exports = app
-
-app.use(express.json())
 
 const userRouter = require('./routes/userRoutes')
 const viewRouter = require('./routes/viewRoutes')
+
+app.use(express.json())
+
+
 
 app.use('/api/v1/passenger', userRouter)
 app.use('/api/v1/signup', userRouter)
@@ -19,3 +21,5 @@ app.use(express.static(path.join(__dirname, 'views')))
 // app.listen(port,()=>{
 //     console.log(`App running on port ${port} ..`)
 // })
+
+module.exports = app
