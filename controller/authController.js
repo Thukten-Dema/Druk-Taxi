@@ -26,36 +26,8 @@ const signToken = (id) => {
         expiresIn :  process.env.JWT_EXPIRES_IN,
     })
 }
-<<<<<<< HEAD
-=======
-exports.signup = async (req, res, next) => {
-    try{
-    const newUser = await User.create(req.body)
-    createSendToken(newUser, 201, res)
-    const token = signToken(newUser._id)
->>>>>>> main
 
-const createSendToken = (user, statusCode, res) => {
-    const token = signToken(user._id)
-    const cookieOptions = {
-        expires: new Date(
-            Date.now() + process.env.JWT_COOKIES_EXPIRES_IN * 24 * 60 * 60* 1000,
-        ), 
-        httpOnly: true, 
-    }
 
-    res.cookie('jwt', token, cookieOptions)
-    
-    res.status(statusCode).json({
-        status : 'success',
-        token,
-        data : {
-            user
-        }
-    })
-    
-
-}
 exports.signup = async (req, res, next) => {
     try{
     const newUser = await User.create(req.body)
