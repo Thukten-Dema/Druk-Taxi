@@ -12,6 +12,7 @@ app.use(express.json())
 
 app.use('/api/v1/passenger', userRouter)
 app.use('/api/v1/signup', userRouter)
+app.use('/api/v1/login', userRouter)
 app.use('/', viewRouter)
 
 app.use(express.static(path.join(__dirname, 'views')))
