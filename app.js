@@ -11,6 +11,7 @@ app.use(express.json())
 
 
 app.use('/api/v1/passenger', userRouter)
+app.use('/api/v1/driver', userRouter)
 app.use('/api/v1/signup', userRouter)
 app.use('/', viewRouter)
 

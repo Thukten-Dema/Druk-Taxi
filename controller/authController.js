@@ -67,23 +67,23 @@ exports.signup = async (req, res, next) => {
     }
 
     catch(err) {
-        res.status(500).json({error: err.message});
+        res.status(500).json({ error: err.message });
 
     }
 }
 
 exports.login = async (req, res, next) => {
     try{
-        const { email, password} = req.body
+        const { email,password } = req.body
 
-        if( !email || !password ){
+        if( !email || !password) {
             return next(new AppError('Please provide an email and password!', 400))
         }
 
-        const user = await User.findOne({ email}).select('+password')
+        const user = await User.findOne({ email }).select('+password')
 
-        if (!user || ! (await user.correctPassword(password, user.password))) {
-            return next(new AppError('Incorrect email and password!', 404))
+        if (!user || !(await user.correctPassword( password, user.password))) {
+            return next(new AppError('Incorrect email and password', 401))
  
         }
         // const correct = await User.correctPassword(password, user.password)
@@ -94,19 +94,19 @@ exports.login = async (req, res, next) => {
             // if (!correctPassword) {
             //     return done(null, false, { message: 'Incorrect email or password' });
             // }
-        createSendToken(user, 200, res)
+        createSendToken(newUser, 200, res)
 
         // const token = signToken(user._id)
         // res.status(200).json({
         //     status : 'success',
-        //     token
+        //     token,
         // })
             
             
     }
 
     catch(err) {
-        res.status(500).json({error: err.message});
+        res.status(500).json({ error: err.message });
 
     }
 }
