@@ -131,3 +131,8 @@
     text-decoration: none;
     color: #0c00b8;
 }
+
+@media(max-width: 584px){
+    .container{
+     max-width: 100%;
+   }}
