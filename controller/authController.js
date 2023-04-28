@@ -94,7 +94,7 @@ exports.login = async (req, res, next) => {
             // if (!correctPassword) {
             //     return done(null, false, { message: 'Incorrect email or password' });
             // }
-        createSendToken(newUser, 200, res)
+        createSendToken(user, 200, res)
 
         // const token = signToken(user._id)
         // res.status(200).json({
