@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const validator = require('validator')
 const bcrypt =require ('bcryptjs')
 const userSchema = new mongoose.Schema({
-
+//sign up for passenger
     name: {
         type: String,
         required: [true, 'Please tell us your name!'],
@@ -19,10 +19,7 @@ const userSchema = new mongoose.Schema({
         type: Number,
         required: [true, 'Your contact number!'],
     },
-    // photo: {
-    //     type: String,
-    //     default: 'default.jpg',
-    // },
+    
     role: {
         type: String,
         enum: ['passenger', 'driver', 'admin'],
@@ -51,6 +48,59 @@ const userSchema = new mongoose.Schema({
             message: 'Passwords are not the same' , 
         }
     },
+
+//driver sign up
+name: {
+    type: String,
+    required: [true, 'Please tell us your name!'],
+},
+email: {
+    type: String,
+    required: [true, 'Please provide your name!'],
+    unique: true,
+    lowercase: true,
+    validate: [validator.isEmail, 'Provide a valid email'],
+},
+
+contact: {
+    type: Number,
+    required: [true, 'Your contact number!'],
+},
+licenseNumber: {
+    type: String,
+    required: [true, 'Your license number!'],
+
+},
+role: {
+    type: String,
+    enum: ['passenger', 'driver', 'admin'],
+    default: 'passenger',
+},
+password: {
+    type: String,
+    required: [true, 'Please provide a password!'],
+    minlength: 5,
+    //password won't be included when we get the users
+    select: false,
+},
+
+active: {
+    type: Boolean,
+    default: true,
+    select: false,
+},
+passwordConfirm: {
+    type : String,
+    required: [true, 'Please confirm your password'],
+    validate: {
+        validator : function (el) {
+            return el === this.password
+        }, 
+        message: 'Passwords are not the same' , 
+    }
+},
+
+
     active: {
         type: Boolean,
         default: true,
