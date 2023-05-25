@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans";
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+}
+
+nav {
+    background-color: #272727;
+    height: 100px;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+nav img {
+    height: 60px;
+}
+
+nav .logo {
+    margin-right: auto;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    padding: 0 3vw;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    margin: 1rem;
+    position: relative;
+}
+
+.login-wrapper .login {
+    background-color: #F1612F;
+    padding: .7rem 2rem;
+    border-radius: 10px;
+}
+
+.login-wrapper {
+    padding: 0 3vw;
+}
+
+.login-wrapper a {
+    transition: 0.3s all ease-in-out;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    margin: 0 .6rem;
+}
+
+nav .login:hover {
+    background-color: #ce471a;
+}
+
+.login-wrapper .Signup::after,
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: white;
+    transition: 0.3s all ease-in-out;
+}
+
+.login-wrapper .Signup:hover::after,
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.links,
+.login-wrapper {
+    display: flex;
+    height: 100px;
+    align-items: center;
+}
+
+/* footer */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI';
+    font-weight: 400;
+    background-color: white;
+}
+
+.footer {
+    padding: 40px 0 10px 0;
+    background-color: #272727;
+}
+
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid silver;
+}
+
+.footer .social a {
+    font-size: 24px;
+    color: inherit;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 1px;
+    opacity: 0.8;
+}
+
+.footer .social a:hover {
+    opacity: 1;
+}
+
+.footer ul {
+    margin-top: 0;
+    padding: 25px;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer ul li a:hover {
+    opacity: 1;
+}
+
+.footer .copyright {
+    color: white;
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 13px;
+}
+
+.type2 {
+    width: 12%;
+    display: block;
+    margin: 60px auto;
+}

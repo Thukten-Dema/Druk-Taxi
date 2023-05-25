@@ -8,4 +8,5 @@ router.get('/signup', viewsController.getSignupForm)
 router.get('/', viewsController.getHome)
 router.get('/login', viewsController.getLoginForm)
 router.get('/profile', authController.protect, viewsController.getProfile)
+router.get('/ride', authController.protect, viewsController.bookRide)
 module.exports = router

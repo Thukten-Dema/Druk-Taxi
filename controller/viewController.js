@@ -16,3 +16,7 @@ exports.getLoginForm = (req, res) => {
 exports.getProfile = (req, res) => {
     res.sendFile(path.join(__dirname, "../", "views", "profile.html"))
 }
+
+exports.bookRide = (req, res) => {
+    res.sendFile(path.join(__dirname, "../", "views", "book_a_ride.html"))
+}

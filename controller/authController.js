@@ -33,8 +33,6 @@ exports.signup = async (req, res, next) => {
     try {
         const newUser = await User.create(req.body)
         const token = signToken(newUser._id)
-
-
         createSendToken(newUser, 201, res)
     }
     catch (err) {

@@ -29,7 +29,6 @@ const userSchema = new mongoose.Schema({
         //password won't be included when we get the users
         select: false,
     },
-
     active: {
         type: Boolean,
         default: true,
