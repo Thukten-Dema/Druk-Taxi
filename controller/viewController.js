@@ -21,3 +21,7 @@ exports.getForm =(req, res) => {
 exports.getDriver_signup =(req, res) => {
     res.sendFile(path.join(__dirname, '../', 'views','driver_signup.html'))
 }
+/* Book_a_ride page */
+exports.getBook_a_ride = (req, res) => {
+    res.sendFile(path.join(__dirname, '../','views','book_a_ride.html'))
+}

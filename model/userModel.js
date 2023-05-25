@@ -68,7 +68,9 @@ contact: {
 },
 licenseNumber: {
     type: String,
-    required: [true, 'Your license number!'],
+    minlength: 5,
+    maxlength:5,
+    select: false,
 
 },
 role: {
@@ -139,6 +141,10 @@ userSchema.methods.correctPassword = async function (
 ) {
     return await bcrypt.compare(candidatePassword, userPassword)
 }
+
+
+
+
 
 
 
