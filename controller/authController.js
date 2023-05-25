@@ -32,23 +32,13 @@ const signToken = (id) => {
 exports.signup = async (req, res, next) => {
     try {
         const newUser = await User.create(req.body)
-        createSendToken(newUser, 201, res)
         const token = signToken(newUser._id)
 
-        res.status(201).json({
-            status: 'success',
-            token,
-            data: {
-                user: newUser
-            }
-        }
 
-        )
+        createSendToken(newUser, 201, res)
     }
-
     catch (err) {
         res.status(500).json({ error: err.message });
-
     }
 }
 

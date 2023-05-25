@@ -18,6 +18,7 @@
     <!-- CSS Styles  -->
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/alert.css">
     <link rel="stylesheet" href="css/footer.css">
     <!-- CSS Styles  -->
     <title>Login</title>
@@ -70,7 +71,7 @@
                                         Person
                                     </span>
                                 </div>
-                                <input type="text" required=true placeholder="Enter your name" name="a">
+                                <input type="text" id="name" required=true placeholder="Enter your name" name="a">
                             </div>
                         </div>
                         <div class="input">
@@ -81,10 +82,10 @@
                                         Mail
                                     </span>
                                 </div>
-                                <input type="email" required=true placeholder="Email">
+                                <input type="email" id="email" required=true placeholder="Email">
                             </div>
                         </div>
-                        <div class="input">
+                        <!-- <div class="input">
                             <label for="">Contact Number</label>
                             <div class="field">
                                 <div class="icon">
@@ -92,10 +93,10 @@
                                         phone
                                     </span>
                                 </div>
-                                <input type="text" required=true placeholder="Contact Number" maxlength="8"
-                                    minlength="8">
+                                <input type="text" required=true id="contactno" placeholder="Contact Number"
+                                    maxlength="8" minlength="8">
                             </div>
-                        </div>
+                        </div> -->
                         <div class="input">
                             <label for="">Password</label>
                             <div class="field">
@@ -104,7 +105,7 @@
                                         Lock
                                     </span>
                                 </div>
-                                <input type="password" required=True placeholder="Password">
+                                <input type="password" id="password" required=True placeholder="Password">
                             </div>
                         </div>
                         <div class="input">
@@ -115,12 +116,12 @@
                                         Lock
                                     </span>
                                 </div>
-                                <input type="password" required=true placeholder="Password">
+                                <input type="password" id="passwordConfirm" required=true placeholder="Password">
                             </div>
                         </div>
 
                         <div class="submit">
-                            <input type="submit" value="Sign Up">
+                            <input type="submit" class="signup-btn" value="Sign Up">
                         </div>
 
                         <div class="signup-link">
