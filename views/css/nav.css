@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     font-family: "Open Sans";
@@ -7,58 +8,66 @@
     /* overflow-x: hidden; */
 }
 
-nav{
+nav {
     background-color: #272727;
     height: 100px;
 }
-.nav-wrapper{
+
+.nav-wrapper {
     display: flex;
     justify-content: flex-end;
 
 }
-nav img{
+
+nav img {
     height: 60px;
 }
 
-nav .logo{
+nav .logo {
     margin-right: auto;
     display: flex;
     height: 100px;
     align-items: center;
     padding: 0 3vw;
 }
-nav ul{
+
+nav ul {
     list-style: none;
     display: flex;
     margin: 0;
 }
-nav ul li a{
+
+nav ul li a {
     text-decoration: none;
     color: white;
     margin: 1rem;
     position: relative;
 }
-.login-wrapper .login{
+
+.login-wrapper .login {
     background-color: #F1612F;
-    padding: .7rem 2rem; 
+    padding: .7rem 2rem;
     border-radius: 10px;
 }
 
-.login-wrapper{
+.login-wrapper {
     padding: 0 3vw;
 }
-.login-wrapper a{
+
+.login-wrapper a {
     transition: 0.3s all ease-in-out;
     position: relative;
     text-decoration: none;
     color: white;
     margin: 0 .6rem;
 }
-nav .login:hover{
+
+nav .login:hover {
     background-color: #ce471a;
 }
 
-.login-wrapper .Signup::after, nav ul li a::after{
+.login-wrapper .Signup::after,
+nav ul li a::after {
     content: "";
     position: absolute;
     bottom: -2px;
@@ -68,11 +77,25 @@ nav .login:hover{
     background-color: white;
     transition: 0.3s all ease-in-out;
 }
-.login-wrapper .Signup:hover::after, nav ul li a:hover::after{
+
+.login-wrapper .Signup:hover::after,
+nav ul li a:hover::after {
     width: 100%;
 }
-.links ,.login-wrapper{
+
+.links,
+.login-wrapper {
     display: flex;
     height: 100px;
     align-items: center;
+}
+
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile span {
+    font-size: 2rem
 }
