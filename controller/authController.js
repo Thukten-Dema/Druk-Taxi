@@ -66,7 +66,7 @@ exports.login = async (req, res, next) => {
     }
 }
 
-exports.logout = (res, req) => {
+exports.logout = (req, res) => {
     console.log("Logout test ")
     res.cookie('token', '', {
         expiresIn: new Date(Date.now() + 10 * 1000),

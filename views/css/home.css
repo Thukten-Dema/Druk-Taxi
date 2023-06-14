@@ -1,40 +1,44 @@
-.banner{
+.banner {
     position: relative;
     display: flex;
     align-items: center;
     height: calc(100vh - 100px);
 }
-.banner img{
+
+.banner img {
     position: absolute;
     z-index: -1;
-    top: 0; 
+    top: 0;
     left: 0;
     width: 100vw;
     height: 100%;
 }
 
-.banner-content{
+.banner-content {
     width: 50vw;
     height: fit-content;
     background-color: rgba(0, 0, 0, 0.5);
     overflow-y: hidden;
     color: white;
-    margin: 0vw 3vw; 
+    margin: 0vw 3vw;
     padding: 4rem 2rem;
 }
-.banner-content h1{
+
+.banner-content h1 {
     text-align: left;
     overflow-y: hidden;
     margin-bottom: 1rem;
     font-weight: 500;
     font-size: 36px;
 }
-.banner-content p{
-    
+
+.banner-content p {
+
     margin-bottom: 2rem;
     font-size: 20px;
 }
-.banner-content a{
+
+.banner-content a {
     text-decoration: none;
     font-weight: 500;
     color: white;
@@ -47,7 +51,94 @@
     width: fit-content;
     transition: 0.3s all ease-in-out
 }
-.banner-content a:hover{
+
+.banner-content a:hover {
     background-color: #ce471a;
 
+}
+
+.section {
+    margin-block: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-items {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.section-item,
+.Testimonials {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.figure {
+    width: 40%;
+}
+
+.figure h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+
+}
+
+.btn-detail {
+    color: white;
+    background-color: #F1612F;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 25px;
+}
+
+.detail {
+    width: 40%;
+    margin-top: 1.6rem;
+}
+
+.detail p {
+    line-height: 1.7rem;
+    color: #000000ad;
+}
+
+.picture {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+.author {
+    color: #000000ad;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.background-yellow {
+    height: 400px;
+    width: 100%;
+    background-color: #e3ac09;
+    position: relative;
+    bottom: 23rem;
+    z-index: -1;
+}
+
+
+
+.Testimonials .detail {
+    margin-top: 5rem;
+}
+
+.Testimonials .picture {
+    height: 400px;
+}
+
+.Testimonials .detail p {
+    color: black;
+    line-height: 1.7rem;
 }

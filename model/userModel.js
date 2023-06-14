@@ -17,6 +17,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         default: 'user.jpg',
     },
+    contactNumber: {
+        type: String,
+        default: "xxx-xxx-xxx"
+    },
     role: {
         type: String,
         enum: ['passenger', 'driver', 'admin'],

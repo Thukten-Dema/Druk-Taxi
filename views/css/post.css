@@ -1,0 +1,83 @@
+.content {
+    display: flex;
+    width: 100vw;
+    margin-top: 5rem;
+
+}
+
+.main-wrapper {
+    padding: 2rem 5rem;
+}
+
+.form {
+    margin-left: 2rem;
+}
+
+.input {
+    text-align: left;
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.input .field {
+    position: relative;
+    text-align: right;
+    width: 300px;
+}
+
+.input label {
+    margin: 0 0rem .3rem 1rem;
+}
+
+.field .icon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    background-color: white;
+    color: rgb(85, 85, 85);
+    border-radius: 50px 0 0 50px;
+    /* border-right: 1px solid black; */
+    left: 0;
+    border: 1px solid rgb(85, 85, 85);
+    height: 100%;
+    width: 50px;
+    padding-left: 6px;
+}
+
+.field input {
+    padding: .8rem;
+    border-radius: 0 50px 50px 0;
+    width: calc(100% - 50px);
+    border: 1px solid rgb(85, 85, 85);
+    border-left: none;
+}
+
+.field input:focus {
+    outline: none;
+}
+
+.forgot_pw {
+    text-align: right;
+    margin: 0 1rem;
+
+}
+
+.forgot_pw a {
+    text-decoration: none;
+    color: white;
+}
+
+.submitWrapper {
+    padding: 1rem;
+}
+
+.submitWrapper input {
+    padding: 0.7rem 1.5rem;
+    color: white;
+    border: none;
+    background-color: #FE6430;
+    border-radius: 10px;
+
+}

@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+
+}
+
+.mainWrapper {
+    display: flex;
+}
+
+.mainContent {
+    width: calc(100vw - 18vw)
+}
+
+.side-nav {
+    width: 18vw;
+    background-color: #272727;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.navbar {
+    padding: 0 2rem;
+    margin-top: 3rem;
+}
+
+.nav {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.active {
+    color: #FF652F;
+}
+
+.nav span {
+    margin-right: 1rem;
+}
+
+.header {
+    background-color: #272727;
+    padding: 1rem 3rem 1rem 1rem;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1 {
+    font-weight: 600;
+    color: white;
+    font-size: 26px;
+}
+
+.header button {
+    padding: .7rem 2rem;
+    border: none;
+    font-size: 16px;
+    background-color: #FF652F;
+    color: white;
+    border-radius: 10px;
+}
+
+.cardWrapper {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+
+.card {
+    color: white;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #13A76B;
+    border-radius: 10px;
+    height: 230px;
+}
+
+.cardLabel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardLabel span {
+    margin-bottom: .5rem;
+    font-size: 32px;
+}
+
+.cardLabel p {
+    font-size: 18px;
+}
+
+.cardDetail {
+    /* width: 20%; */
+    padding: 2rem;
+    font-size: 24px;
+    font-weight: 600
+}
+
+.tableWrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.driverTable,
+.userTable {
+    width: 40%;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    min-height: 50vh;
+    padding: 2rem;
+
+}
+
+.Tableheader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Tableheader h1 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.Tableheader a {
+    text-decoration: none;
+    color: #FF652F;
+    display: flex;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+}
+
+.Tableheader a span {
+    transition: 0.3s all ease-in-out;
+    font-size: 18px;
+    margin-left: .5rem;
+}
+
+.Tableheader a:hover span {
+    transform: translateX(.5rem)
+}
+
+.tableContent {
+    display: flex;
+    padding: 1rem 0;
+
+}
+
+.tableContent h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.emailCol {
+    width: 50%;
+}
+
+.nameCol {
+    width: 50%;
+}
+
+.tableContent p {
+    padding: 0.5rem 0
+}

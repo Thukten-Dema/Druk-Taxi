@@ -5,7 +5,7 @@ const login = async (email, password) => {
     try {
         const res = await axios({
             method: 'POST',
-            url: 'http://localhost:4004/api/v1/users/login',
+            url: 'http://localhost:4008/api/v1/users/login',
             data: {
                 email,
                 password,
@@ -15,12 +15,22 @@ const login = async (email, password) => {
         console.log("after res")
         if (res.data.status === 'success') {
             showAlert('success', 'Logged in successfully')
-            window.setTimeout(() => {
-                location.assign('/')
-            }, 1500)
+
             var obj = res.data.data.user
             document.cookie = ' token = ' + JSON.stringify(obj)
             console.log(res)
+            const role = res.data.data.user.role
+            if (role === "admin") {
+                window.setTimeout(() => {
+                    location.assign('/dashboard')
+                }, 1500)
+            } else {
+                window.setTimeout(() => {
+                    location.assign('/')
+                }, 1500)
+
+            }
+            console.log(res.data.data.user.role)
         }
     } catch (err) {
         console.log(err.message)

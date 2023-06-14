@@ -4,8 +4,14 @@ const app = express()
 const router = require('./routes/userRoutes')
 const viewRouter = require('./routes/viewRoutes')
 const rideRouter = require('./routes/rideRoutes')
+const driverRouter = require('./routes/driverRoutes')
 const cookieParser = require('cookie-parser')
+const bodyParser = require('body-parser');
+app.use(express.static('public'));
+
 app.use(cookieParser())
+app.use(bodyParser.json());
+app.use("/api/v1/driver", driverRouter)
 app.use(express.json())
 app.use('/api/v1/rides', rideRouter)
 app.use('/', viewRouter)

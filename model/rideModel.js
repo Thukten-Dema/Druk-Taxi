@@ -10,30 +10,32 @@ const newRideSchema = new mongoose.Schema({
     userName: {
         type: String,
         required: [true, "User name needed"]
-
+    },
+    driverName: {
+        type: String,
     },
     startingLocation: {
         type: String,
-        required: [true, "A name should be unique"],
+        required: true
     },
     passengers: {
         type: String,
         required: true,
         trim: true,
     },
+
     departureTime: {
         type: String,
-        required: [true, "A tour must have a cover image"]
+        required: true
     },
 
     user: {
         type: String,
         required: true,
         default: "passenger"
-    }
+    },
 
 })
-
 newRideSchema.pre(/^find/, function (next) {
     this.populate({
         path: 'user',

@@ -1,17 +1,18 @@
 // import axios from 'axios'
 import { showAlert } from './alert.js'
 
-export const signup = async (name, email, password, passwordConfirm, role) => {
+export const signup = async (name, email, contactNumber, licenseNumber, password, passwordConfirm) => {
     try {
         const res = await axios({
             method: 'POST',
-            url: 'http://localhost:4004/api/v1/users/signup',
+            url: 'http://localhost:4008/api/v1/driver/',
             data: {
                 name,
                 email,
+                contactNumber,
+                licenseNumber,
                 password,
-                passwordConfirm,
-                role,
+                passwordConfirm
             },
         })
         console.log(res)
@@ -25,7 +26,7 @@ export const signup = async (name, email, password, passwordConfirm, role) => {
         let message = typeof err.response !== 'undefined'
             ? err.response.data.message
             : err.message
-        showAlert('error', 'Error: Passwords are not the same!', message)
+        showAlert('error', err)
     }
 }
 
@@ -33,9 +34,10 @@ document.querySelector('.signup-btn').addEventListener('click', (e) => {
     e.preventDefault()
     const name = document.getElementById('name').value
     const email = document.getElementById('email').value
+    const contactNumber = document.getElementById("contactNumber").value
+    const licenseNumber = document.getElementById("licenseNumber").value
     const password = document.getElementById('password').value
     const passwordConfirm = document.getElementById('passwordConfirm').value
-    const role = "passenger"
-    console.log(name, email, password, passwordConfirm, role)
-    signup(name, email, password, passwordConfirm, role)
+    console.log(name, email, contactNumber, licenseNumber, password, passwordConfirm)
+    signup(name, email, contactNumber, licenseNumber, password, passwordConfirm)
 })
