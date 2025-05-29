@@ -34,7 +34,7 @@
 - Built scalable, secure systems with user authentication and role management.
 - Gained hands-on experience with UI/UX design for mobile responsiveness.
 
-[🎨 Open in Figma]([https://www.figma.com/file/your-figma-id/KiZoRa-Design?type=design](https://www.figma.com/proto/ffbfyatSALY4HdZmifIs3D/Druk-Taxi?node-id=0-1&t=qGyVNdRQdeGTJ6C9-1)
+[🎨 Open in Figma](https://www.figma.com/proto/ffbfyatSALY4HdZmifIs3D/Druk-Taxi?node-id=0-1&t=qGyVNdRQdeGTJ6C9-1)
 
 
 
