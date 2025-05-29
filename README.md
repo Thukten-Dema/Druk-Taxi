@@ -34,7 +34,9 @@
 - Built scalable, secure systems with user authentication and role management.
 - Gained hands-on experience with UI/UX design for mobile responsiveness.
 
-[🎨 Open in Figma]-https://www.figma.com/proto/ffbfyatSALY4HdZmifIs3D/Druk-Taxi?node-id=72-1101&t=qGyVNdRQdeGTJ6C9-1
+### 🎨 UI/UX Design (Figma)
+
+[View DrukTaxi UI Prototype on Figma](https://www.figma.com/proto/ffbfyatSALY4HdZmifIs3D/Druk-Taxi?node-id=72-1101&t=qGyVNdRQdeGTJ6C9-1)
 
 
 
